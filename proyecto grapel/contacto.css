@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+.cabeza{
+    width: auto;
+    height: 80px;
+    background-color: rgb(45, 46, 53);
+    border-bottom: 6px solid rgba(85, 150, 255, 0.79);
+}
+span{
+    color: rgba(85, 150, 255, 0.79);
+}
+.contenedorcabeza{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    
+}
+.cabezeras{
+    display: flex;
+    justify-content: space-around;
+}
+.cabezera{
+    color: aliceblue;
+    padding: 26px;
+    cursor: pointer;
+}
+
+.titulo{
+    display: flex;
+    
+}
+.diseñomultimedia{
+    font-size: 35px;
+    color: aliceblue;
+}
+.cabezera:hover{
+    background-color: aliceblue;
+    color: rgba(85, 150, 255, 0.79);
+}
+
+
+
+
+
+
+.cabezamedio{
+    height: 80px;
+    background-color: rgb(45, 46, 53);
+    width: auto;
+}
+.contenedorcabezamedio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    
+}
+.contenedoremail{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.email{
+    padding: 7px;
+}
+.boton{
+    width: 110px;
+    background-color: rgb(241, 110, 45);
+    color: aliceblue;
+}
+.titulomedio{
+    color: aliceblue;
+    font-size: 30px;
+}
+.boton:hover{
+    transform: scale(1.2); 
+}
+
+
+
+
+
+
+
+.contenedorpadre{
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedoriz{
+    margin-top: 10px;
+    height: 480px;
+    width: 700px;
+    
+}
+.contenedoriz1{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    height: 40px;
+    
+}
+.contenedorde{
+    width: 390px;
+    height: 220px;
+    margin-top: 20px;
+    background-color: rgb(61, 61, 74);
+   
+}
+
+.contenedorde1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: start;
+    height: 200px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cabezafinal{
+    margin-top: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 166, 255);
+}
+.textofinal{
+    color: aliceblue;
+
+}
+.formulario{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.mensaje{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 9px;
+}
+.enviar{
+    width: 100%;
+    height: 30px;
+    background-color:  rgb(241, 110, 45);
+    cursor: pointer;
+}
+img{
+    margin-top: 30px;
+    height: 234px;
+    width: 100%;
+}
+
+
+
