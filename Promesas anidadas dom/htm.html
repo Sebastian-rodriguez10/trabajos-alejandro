@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="contenedorPadre">
+        <div class="contenedorImput">
+            <h2 class="h2">Consultar usuario</h2>
+            <input type="text" id="input" class="form">
+            <button id="boton" class="form" onclick="procesos()">Buscar perfil</button>
+            <p class="cargando hide" id="car">Cargando...</p>
+            <div class="contenedorInformacion1">
+                <h3 class="du">Datos del usuario</h3>
+                <span class="impresionUsuario" ><b>Nombre: </b><span id="nombreUsuario">sebas</span></span>
+                <span class="impresionUsuario" ><b>Email:</b> <span id="correoUsuario">emailsebas@mail.com</span></span>
+                <span class="impresionUsuario" ><b>Ciudad: </b> <span id="ciudadUsuario">Armenia</span></span>
+            </div>
+            <div class="contenedorInformacion2 hide" id="empanada">
+                <h3 class="du">Productos del usuario</h3>
+                <div class="con" id="con1">
+                    <span class="impresionUsuario2" >Nombre: <span id="nombreP1"></span></span>
+                    <span class="impresionUsuario2" >Precio: <span id="precioP1"></span></span>
+                    <span class="impresionUsuario2" >Estado: <span id="estadoP1"></span></span>
+
+                </div >
+                <div class="con" id="con2">
+                    <span class="impresionUsuario2">Nombre: <span id="nombreP2"></span></span>
+                    <span class="impresionUsuario2">Precio: <span id="precioP2"></span></span>
+                    <span class="impresionUsuario2">Estado: <span id="estadoP2"></span></span>
+                </div>
+                <div class="con2">
+                    <h3 class="du">Ultima compra realizada</h3>
+                    <span class="impresionUsuario2">Nombre: <span id="nombreP3"></span></span>
+                    <span class="impresionUsuario2">Precio: <span id="precioP3"></span></span>
+                    <span class="impresionUsuario2">Estado: <span id="estadoP3"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>

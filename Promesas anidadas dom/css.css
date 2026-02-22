@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 7px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 6, 172);
+}
+.contenedorPadre{
+    height: 90vh;
+    margin-top: 36px;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedorImput{
+    background-color: aliceblue;
+}
+
+.h2{
+    text-align: center;
+    margin-top: 15px;
+}
+.form{
+    margin-left: 23px;
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+}.form:hover{
+    border-color: blue;
+}
+#boton:hover{
+   border-color: blue;
+    
+}
+.hide{
+    display: none;
+}
+.contenedorInformacion1{
+    background-color: rgba(164, 164, 164, 0.162);
+    margin-left: 23px;
+    width: 400px;
+    height: 120px;
+    margin-top: 5px;
+    border-left: 7px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+.cargando{
+    margin-top: 9px;
+    text-align: center;
+}
+.impresionUsuario{
+    margin-top: 10px;
+    margin-left: 12px;
+    font-size: 18px;
+}
+.contenedorInformacion2{
+    background-color: rgba(164, 164, 164, 0.162);
+    margin-top: 20px;
+    width: 400px;
+    border-left: 7px solid blue;
+    margin-left: 23px;
+    height: 330px;
+}
+.du{
+    margin-top: px;
+    margin-left: 12px;
+}
+.impresionUsuario2{
+    margin-left: 12px;
+    font-size: 17px;
+    margin-top: 4px;
+}
+.con{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: rgba(55, 84, 109, 0.173);
+    margin-left: 12px;
+}
+.con2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    background-color: rgba(119, 13, 123, 0.173);
+    margin-left: 10px;
+    margin-top: 20px;
+    border-left: 5px solid purple;
+}
