@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.divpadre {
+    margin-top: 50px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    font-size: 23px;
+    padding: 10px;
+}
+
+.divformulario {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(108, 103, 112);
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.escribirtitulo {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.escribirtexto {
+    margin-top: 10px;
+    height: 100px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.boton {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.tarjeta {
+    background-color: lightgray;
+    width: 100%;
+    min-height: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.favorita {
+    background-color: aqua;
+}
+
+.estrella {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.eliminar {
+    height: 40px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.cambio {
+    background-color: rgb(5, 152, 19);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.completado {
+    width: 100px;
+    height: 30px;
+}
+.eliminado{
+    width: 100px;
+    height: 30px;
+}
+
+
+.contador{
+    margin-top:20px;
+    background: #f2f2f2;
+    width: 90%;
+    max-width: 1000px;
+    text-align:center;
+    font-weight:bold;
+}
+@media (max-width:600px) {
+
+    .divpadre {
+        font-size: 18px;
+    }
+
+    .contador{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .divformulario {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .escribirtitulo {
+        font-size: 16px;
+    }
+
+    .boton {
+        height: 45px;
+        font-size: 16px;
+    }
+
+
+}
