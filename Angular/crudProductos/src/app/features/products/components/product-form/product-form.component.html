@@ -1,15 +1,28 @@
 <div class="form-container">
-    <h2 class="form-title">Crear Producto</h2>
+  <h2 class="form-title">Crear Producto</h2>
 
-    <form class="product-form">
-        <h4 class="form-label">Nombre</h4>
-        <input class="form-input" type="text" placeholder="Ingrese el nombre">
+  <form class="product-form" (submit)="onSubmit($event)">
+    <h4 class="form-label">Nombre</h4>
+    <input
+      class="form-input"
+      type="text"
+      placeholder="Ingrese el nombre"
+      [(ngModel)]="nombre"
+      name="nombre"
+    />
 
-        <h4 class="form-label">Precio</h4>
-        <input class="form-input" type="number" placeholder="Ingrese el precio">
+    <h4 class="form-label">Precio</h4>
+    <input
+      class="form-input"
+      type="number"
+      placeholder="Ingrese el precio"
+      [(ngModel)]="precio"
+      name="precio"
+    />
 
-        <button class="form-button" type="submit">
-            Crear
-        </button>
-    </form>
+    <button class="form-button" type="submit" [disabled]="!canSubmit">
+      Crear
+    </button>
+  </form>
 </div>
+

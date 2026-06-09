@@ -1,1 +1,10 @@
-<p>product-page works!</p>
+<div class="product-page">
+  <div class="left">
+    <app-product-list [productos]="productos"></app-product-list>
+  </div>
+  <div class="right">
+    <app-product-form (productoCreado)="onProductoCreado()"></app-product-form>
+  </div>
+</div>
+
+

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Product } from '../../services/product.types';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-page',
@@ -7,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent {
+  productos: Product[] = [];
 
+  constructor(private readonly productService: ProductService) {
+    this.productos = this.productService.getAll();
+  }
+
+  onProductoCreado() {
+    this.productos = this.productService.getAll();
+  }
 }
+
