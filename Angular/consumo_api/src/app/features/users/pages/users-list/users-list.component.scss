@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+header h1 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header span {
+    color: #6b7280;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+section {
+    width: 100%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    width: 100%;
+}

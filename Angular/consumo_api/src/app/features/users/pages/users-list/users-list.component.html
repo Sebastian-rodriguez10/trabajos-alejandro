@@ -1,0 +1,12 @@
+<header>
+    <h1>USUARIOS</h1>
+    <span>
+        Cantidad de usuarios encontrados: {{ userList.length }}
+    </span>
+</header>
+
+<section>
+    <div class="cards-container">
+        <app-user-card *ngFor="let item of userList" [user]="item"></app-user-card>
+    </div>
+</section>
