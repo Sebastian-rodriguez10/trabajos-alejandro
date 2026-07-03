@@ -1,0 +1,30 @@
+<div *ngIf="loading">
+    Cargando pokémon...
+</div>
+
+<div *ngIf="error">
+    Error al cargar los datos.
+</div>
+
+<div class="container">
+    <app-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"> </app-card>
+</div>
+
+<div class="pagination">
+
+    <button
+        (click)="previousPage()"
+        [disabled]="page === 0">
+        Anterior
+    </button>
+
+    <span>
+        Página {{ page + 1 }}
+    </span>
+
+    <button
+        (click)="nextPage()">
+        Siguiente
+    </button>
+
+</div>
