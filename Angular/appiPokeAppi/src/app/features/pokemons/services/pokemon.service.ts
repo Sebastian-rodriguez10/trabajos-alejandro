@@ -10,11 +10,10 @@ import { pokemonListResponse } from '../model/pokemon-list-response';
 })
 export class PokemonService {
 
-  private api = 'https://pokeapi.co/api/v2/pokemo';
+  private api = 'https://pokeapi.co/api/v2/pokemon';
 
   constructor(private http: HttpClient) {}
 
-  // ahora recibe el offset
   getPokemons(offset: number = 0): Observable<PokemonModel[]> {
 
     return this.http
@@ -32,7 +31,7 @@ export class PokemonService {
           return forkJoin(requests);
         }),
 
-        map(pokemons => pokemons)
+
       );
   }
 }
