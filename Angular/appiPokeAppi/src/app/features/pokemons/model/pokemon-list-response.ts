@@ -6,3 +6,4 @@ export interface pokemonListResponse {
     previous: string | null;
     results: PokemonItem[];
 }
+ 

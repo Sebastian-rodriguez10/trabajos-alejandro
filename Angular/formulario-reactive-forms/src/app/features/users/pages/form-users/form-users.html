@@ -1,0 +1,105 @@
+<div class="contenedor">
+    <h1>⚡ Registro Saiyajin ⚡</h1>
+
+    <form [formGroup]="form">
+        <div class="campo">
+            <label>Nombre completo</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre" formControlName="name">
+
+            <p class="error" *ngIf="form.get('name')?.touched && form.get('name')?.hasError('required')">El nombre es
+                obligatorio</p>
+            <p class="error" *ngIf="form.get('name')?.touched && form.get('name')?.hasError('minlength')">El nombre debe
+                tener al menos 3 caracteres</p>
+        </div>
+
+        <div class="campo">
+            <label>Correo electrónico</label>
+            <input type="email" id="email" placeholder="ejemplo@gmail.com" formControlName="email">
+
+            <p class="error" *ngIf="form.get('email')?.touched && form.get('email')?.hasError('required')">El email es
+                obligatorio</p>
+            <p class="error" *ngIf="form.get('email')?.touched && form.get('email')?.hasError('email')">Ingresa un
+                correo electrónico válido</p>
+        </div>
+
+        <div class="campo">
+            <label>Nombre de usuario</label>
+            <input type="text" id="userName" placeholder="Usuario" formControlName="userName">
+
+            <p class="error" *ngIf="form.get('userName')?.touched && form.get('userName')?.hasError('required')">El
+                nombre de usuario es obligatorio</p>
+        </div>
+
+        <div class="campo">
+            <label>Contraseña</label>
+            <div class="password-container">
+                <input [type]="viewPassword ? 'text' : 'password'" id="password" placeholder="********"
+                    formControlName="password" />
+
+                <button type="button" class="btn-toggle-password" (click)="togglePassword()">
+                    {{ viewPassword ? '🙈' : '👁' }}
+                </button>
+            </div>
+
+            <p class="error" *ngIf="form.get('password')?.touched && form.get('password')?.hasError('required')">La
+                contraseña es obligatoria</p>
+            <p class="error" *ngIf="form.get('password')?.touched && form.get('password')?.hasError('pattern')">La
+                contraseña debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter
+                especial</p>
+        </div>
+
+        <div class="campo">
+            <label>Confirmar contraseña</label>
+            <input type="password" id="confirmPassword" placeholder="********" formControlName="confirmPassword">
+
+            <p class="error"
+                *ngIf="form.get('confirmPassword')?.touched && form.get('confirmPassword')?.hasError('required')">Debe
+                confirmar la contraseña</p>
+
+            <p class="error"
+                *ngIf="form.hasError('errorConfirmPassword') && form.get('confirmPassword')?.touched && !form.get('confirmPassword')?.hasError('required')">
+                La contraseña no coincide</p>
+        </div>
+
+        <div class="campo">
+            <label>Edad</label>
+            <input type="number" id="age" placeholder="Edad" formControlName="age">
+
+            <p class="error" *ngIf="form.get('age')?.touched && form.get('age')?.hasError('required')">Se requiere la
+                edad</p>
+            <p class="error" *ngIf="form.get('age')?.touched && form.get('age')?.hasError('min')">La edad mínima
+                permitida es 1 año</p>
+            <p class="error" *ngIf="form.get('age')?.touched && form.get('age')?.hasError('max')">La edad máxima
+                permitida es 120 años</p>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" id="terms" formControlName="terms">
+            <label for="terms">Acepto los términos y condiciones</label>
+
+            <p class="error" *ngIf="form.get('terms')?.value === false && form.get('terms')?.touched ">Debes
+                aceptar los términos para continuar</p>
+        </div>
+
+        <button type="submit" class="btn-submit" [disabled]="form.invalid" (click)="onClick()">
+            ¡Unirme a los Guerreros Z!
+        </button>
+    </form>
+</div>
+
+
+
+<div class="modal-overlay" *ngIf="mostrarDatos">
+    <div class="modal-box">
+        <h2>¡Guerrero Z Registrado! ⚡</h2>
+
+        <div class="modal-content" *ngIf="datosCapturados">
+            <p><strong>Nombre:</strong> {{ datosCapturados.name }}</p>
+            <p><strong>Email:</strong> {{ datosCapturados.email }}</p>
+            <p><strong>Usuario:</strong> {{ datosCapturados.userName }}</p>
+            <p><strong>Edad:</strong> {{ datosCapturados.age }} años</p>
+        </div>
+
+        <button class="btn-modal" (click)="cerrarModal()">¡A entrenar!</button>
+    </div>
+</div>
