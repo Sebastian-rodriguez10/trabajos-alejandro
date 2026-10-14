@@ -48,12 +48,11 @@ export class FormUsers {
           '',
           [
             Validators.required,
-            Validators.minLength(8),
             Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/),
           ],
         ],
         confirmPassword: ['', [Validators.required]],
-        age: ['', [Validators.required, Validators.min(1), Validators.max(120)]],
+        age: ['', [Validators.required, Validators.min(15), Validators.max(120)]],
         terms: [false, [Validators.requiredTrue]],
       },
       {
