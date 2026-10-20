@@ -1,11 +1,13 @@
-export type Dificultad = "baja" | "mediana" | "alta"; 
+export type Dificultad = "baja" | "media" | "alta" | "todas";
 
 export interface Ruta {
-    id: number;
-    nombre: string;
-    duracionHoras: number;
-    precio: number;
-    incluyenTransporte: boolean;
+  id: number;
+  nombre: string;
+  municipio: string;
+  duracionHoras: number;
+  dificultad: Dificultad;
+  precio: number;
+  incluyeTransporte: boolean;
 }
 
 export const rutas: Ruta[] = [
